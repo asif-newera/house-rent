@@ -1,0 +1,84 @@
+/* Compact Button Styles */
+.cta-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    min-width: 140px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn {
+    background: var(--primary-color, #4a6bff);
+    color: #fff;
+    border-color: var(--primary-color, #4a6bff);
+}
+
+.primary-btn:hover {
+    background: #3a5bef;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.secondary-btn {
+    background: #f8f9fa;
+    color: #333;
+    border-color: #dee2e6;
+}
+
+.secondary-btn:hover {
+    background: #e9ecef;
+    border-color: #ced4da;
+    color: #212529;
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .cta-btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Button focus states */
+.cta-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.3);
+}
+
+/* Button active states */
+.cta-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button with icons */
+.cta-btn i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}

@@ -1,0 +1,20 @@
+<?php
+// Simulate the exact request sent by the browser
+$url = 'http://localhost/HOUSE RENT/admin/login.php';
+$fields = [
+    'email' => 'admin@example.com',
+    'password' => 'admin123',
+    // We need a CSRF token. This is tricky to simulate without a browser session.
+    // However, I can temporarily disable CSRF check in login.php to verify the core logic works via CURL.
+    // Or I can modify this script to fetch the page first, extract the token, and then post.
+];
+
+// Re-enable CSRF check later, but for now test if I can bypass it or if the error is "Invalid CSRF".
+// Actually, the error "Invalid request. Please try again." corresponds to CSRF failure (line 27 of login.php).
+// The user says "credentials is not working", which usually implies "Invalid email or password".
+// If they see "Invalid request", it's CSRF.
+// If they see "Invalid email or password", it's the auth logic.
+
+// Let's first inspect WHAT error the user is likely seeing by checking the code again.
+// echo "Checking CSRF logic...\n";
+?>
